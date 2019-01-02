@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+message ScreenCommand {
+  enum CommandType {
+      NONE = 0;
+      STATUS = 4;
+      GRANT = 5;
+  }
+}
+
+
+message ScreenStatus {
+    enum Status {
+        IDLE = 0;
+        DENIED = 1;
+        LOADING = 3;
+    }
+    Status status = 1;
+}
+
+message ScreenGranted {
+    string message = 1;
+}

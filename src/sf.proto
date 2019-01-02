@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+message Command {
+    string command = 1;
+}
+
+message SensorRead {
+    string name = 1;
+    repeated float values = 2;
+}
+
+message SensorName {
+    string name = 1;
+}
+
+message Ping {
+    int32 value = 1;
+}
+
+message SensorReadList {
+    repeated SensorRead reads = 1;
+}
+
+message Notification {
+    string what = 1;
+}
